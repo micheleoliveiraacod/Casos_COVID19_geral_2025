@@ -275,11 +275,7 @@ ggplot(idosos_estado,
   theme_minimal()
 ggsave("fig_idosos_por_estado.png", width = 8, height = 6)
 
-
-
-# supondo um data frame chamado minha_tabela
 total_linhas <- nrow(db_geral_covid_2025)
 
 cat("Total de linhas da tabela:", total_linhas, "\n")
-# ou simplesmente:
-nrow(db_geral_covid_2025)
+

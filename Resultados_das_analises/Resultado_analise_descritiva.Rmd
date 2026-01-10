@@ -1,0 +1,49 @@
+---
+title: "resultado_analise_descritiva"
+output: html_document
+---
+
+Muitos pacientes não tiveram classificação do estado no seu registro, então temos BR como um estado para agrupar esses dados. Nas analises de totais por estado e municipio esses dados ficarão distorcidos.
+
+Total geral de casos: 597743 
+
+ estadoIBGE total_casos   perc
+   <chr>            <dbl>  <dbl>
+ 1 BR              298853 0.500 
+ 2 SP              109672 0.183 
+ 3 MG               19648 0.0329
+ 4 RJ               18989 0.0318
+ 5 GO               18205 0.0305
+ 6 PA               12523 0.0210
+ 7 SC               11073 0.0185
+ 8 RO               10859 0.0182
+ 9 AM                9739 0.0163
+10 RS                9579 0.0160
+
+municipio           total_casos    perc
+   <chr>                     <dbl>   <dbl>
+ 1 NA                       298853 0.500  
+ 2 SAO PAULO                 25960 0.0434 
+ 3 RIO DE JANEIRO            12799 0.0214 
+ 4 BRASILIA                   4138 0.00692
+ 5 BOTUCATU                   3871 0.00648
+ 6 MANAUS                     3762 0.00629
+ 7 GOIANIA                    3299 0.00552
+ 8 PORTO VELHO                3080 0.00515
+ 9 SAO JOSE DOS CAMPOS        3054 0.00511
+10 CAMPINAS                   2796 0.00468
+
+
+faixa_etaria      total_casos    perc
+   <chr>                   <dbl>   <dbl>
+ 1 20 a 39 anos           197054 0.330  
+ 2 40 a 59 anos           175087 0.293  
+ 3 70 anos e mais          62736 0.105  
+ 4 60 a 69 anos            59660 0.0998 
+ 5 16 a 19 anos            24209 0.0405 
+ 6 11 a 15 anos            20462 0.0342 
+ 7 05 a 10 anos            19732 0.0330 
+ 8 07 meses a 01 ano       13878 0.0232 
+ 9 02 a 04 anos            10665 0.0178 
+10 0 a 06 meses             8348 0.0140 
+11 sem informaç             5912 0.00989

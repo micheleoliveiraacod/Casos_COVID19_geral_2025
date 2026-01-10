@@ -10,28 +10,30 @@ Este repositório documenta uma análise exploratória, de um dataset geral, com
 
 **`❓Algumas questões respondidas no estudo no estudo:`**
 
-Quais estados concentram o maior número total de casos?
+Quais estados concentram o maior número de casos?
 
-Quais faixas etárias apresentam mais casos no Brasil como um todo?
+Quais municipios concentram o maior número de casos?
 
-Quais municípios se destacam com maiores números de casos em cada estado?
+Quais faixas etárias apresentam mais casos no Brasil?
+
+Quais municípios se destacam com maiores números de casos?
 
 Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 **`🗂 Resultados das analises`**
 
-|___ Analise descritiva com valores totais, médias e percentuais.
+- Analise descritiva com valores totais, médias e percentuais.
 
-|___ Grafico - Distribuição de idade.
+- Grafico - Distribuição de idade.
 
-|___ Grafico - Frequência de casos por estado.
+- Grafico - Frequência de casos por estado.
 
-|___ Grafico - Municipios com maior numero de casos or estado (top3).
+- Grafico - Municipios com maior numero de casos or estado (top3).
 
-|___ Grafico - Municipios com maior numero de casos.
+- Grafico - Municipios com maior numero de casos.
 
-|___ Grafico - Total de casos por estado.
+- Grafico - Total de casos por estado.
 
-|___ Grafico - Total de casos por faixa etária no Brasil
+- Grafico - Total de casos por faixa etária no Brasil
 
-|___ Conclusão - Respostas para as perguntas e uma breve discussão.
+- Conclusão - Respostas para as perguntas e uma breve discussão.

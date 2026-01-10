@@ -20,18 +20,18 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 **`🗂 Resultados das analises`**
 
-|___ Analise descritiva com valores totais, médias e percentuais.
+- Analise descritiva com valores totais, médias e percentuais.
 
-|___ Grafico - Distribuição de idade.
+- Grafico - Distribuição de idade.
 
-|___ Grafico - Frequência de casos por estado.
+- Grafico - Frequência de casos por estado.
 
-|___ Grafico - Municipios com maior numero de casos or estado (top3).
+- Grafico - Municipios com maior numero de casos or estado (top3).
 
-|___ Grafico - Municipios com maior numero de casos.
+- Grafico - Municipios com maior numero de casos.
 
-|___ Grafico - Total de casos por estado.
+- Grafico - Total de casos por estado.
 
-|___ Grafico - Total de casos por faixa etária no Brasil
+- Grafico - Total de casos por faixa etária no Brasil
 
-|___ Conclusão - Respostas para as perguntas e uma breve discussão.
+- Conclusão - Respostas para as perguntas e uma breve discussão.

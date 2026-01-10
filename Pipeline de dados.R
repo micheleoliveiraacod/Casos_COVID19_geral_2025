@@ -20,7 +20,7 @@ remotes::install_github("rfsaldanha/microdatasus") # se ainda não tiver
 
 #Importe o CSV
 library(readr)
-db_geral_covid_2025 <- read_csv2("C:/Users/miche/Documents/Projetos GitHub/Case_COVID19_geral_2025/db_geral_covid_2025.csv")
+db_geral_covid_2025 <- read_csv2("C:/Users/miche/Documents/Projetos GitHub/Casos_COVID10_geral_2025/db_geral_covid_2025.csv")
 View(db_geral_covid_2025)
 
 #Explorando os dados
@@ -48,6 +48,13 @@ db <- db_geral_covid_2025 |>
 total_geral <- sum(db$casos, na.rm = TRUE)
 cat("Total geral de casos:", total_geral, "\n")
 
+print("Dimensões do dataset:")
+print(dim(db))
+print("Colunas:")
+print(names(db))
+print("Total de casos:")
+total_casos <- sum(db$casos)
+print(total_casos)
 
 # 2. Total e percentual de casos por estado
 
@@ -95,22 +102,34 @@ cat("=== Total e percentual de casos por faixa etária ===\n")
 print(tab_faixa)
 cat("\n")
 
-df <- read_delim("db_geral_covid_2025.csv", delim = ";", show_col_types = FALSE)
-
-print("Dimensões do dataset:")
-print(dim(db_geral_covid_2025.csv))
-print("Colunas:")
-print(names(db_geral_covid_2025.csv))
-print("Total de casos:")
-total_casos <- sum(df$casos)
-print(total_casos)
+# 5. Total de casos por estado em idosos
 
 
+df_idosos <- db %>% filter(faixa_etaria == "70 anos e mais")
+
+total_casos_idosos <- sum(df_idosos$casos)
+print(paste("Total de casos para 70 anos e mais (nacional):", total_casos_idosos))
 
 
+print("=== TOTAL DE CASOS POR ESTADO - FAIXA ETÁRIA 70 ANOS E MAIS ===")
 
+#Por estado
 
+analise_estado_idosos <- df_idosos %>%
+  group_by(estadoIBGE) %>%
+  summarise(
+    total_casos = sum(casos),
+    n_pacientes = n(),
+    media_casos_por_paciente = round(mean(casos), 2),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    perc_nacional = round(total_casos / total_casos_idosos * 100, 2),
+    perc_pacientes = round(n_pacientes / nrow(df_idosos) * 100, 2)
+  ) %>%
+  arrange(desc(total_casos))
 
+print(analise_estado_idosos)
 
 # GRÁFICOS
 
@@ -132,6 +151,19 @@ ggplot(casos_estado,
     y = "Total de casos"
   ) +
   theme_minimal()
+
+print(analise_estado_idosos)
+
+
+# Top 5 estados com mais casos em idosos
+print("=== TOP 5 ESTADOS COM MAIS CASOS (70+ ANOS) ===")
+print(head(analise_estado_idosos, 5))
+
+# Gráfico simples no console (opcional)
+barplot(analise_estado_idosos$total_casos[1:10], 
+        names.arg = analise_estado_idosos$estadoIBGE[1:10],
+        main = "Top 10 Estados - Casos COVID 70+ Anos",
+        las = 2, cex.names = 0.8)
 
 # 2. Municipios com mais casos, no Brasil.
 

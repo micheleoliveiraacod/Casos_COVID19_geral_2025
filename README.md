@@ -1,8 +1,8 @@
 # 💉Análise de Casos de COVID-19 (DATASUS) 2025
 
-Este repositório documenta uma análise exploratória de 2 DATASET's de casos de COVID-19 do DATASUS.
+Este repositório documenta uma análise exploratória, de um dataset geral, com casos de COVID-19 do DATASUS.
 
-## Descrição do Projeto - Dataset: db_comorbidades_covid_2025.csv
+## Descrição do Projeto
 
 **`🎯Objetivo:`** Identificar os indicadores que traduzem os dados da pandemia de COVID-19 no Brasil, a partir da distribuição de casos por estado e fixa etária.
 
@@ -34,4 +34,4 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 |___ Grafico - Total de casos por faixa etária no Brasil
 
-|___ Conclusão - Respostas das perguntas, dentro da prasta de "Resultados'.
+|___ Conclusão - Respostas para as perguntas e uma breve discussão.

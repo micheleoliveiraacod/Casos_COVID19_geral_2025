@@ -5,8 +5,17 @@ output: html_document
 
 Muitos pacientes não tiveram classificação do estado no seu registro, então temos BR como um estado para agrupar esses dados. Nas analises de totais por estado e municipio esses dados ficarão distorcidos.
 
+"Dimensões do dataset:"
+100672      5
+
+"Colunas:"
+"semEpi"       "estadoIBGE"   "municipio"    "faixa_etaria" "casos"
+
 Total geral de casos: 597743 
 
+Total de casos para 70 anos e mais (nacional): 62736
+
+=== Total e percentual de casos por estado ===
  estadoIBGE total_casos   perc
    <chr>            <dbl>  <dbl>
  1 BR              298853 0.500 
@@ -20,6 +29,8 @@ Total geral de casos: 597743
  9 AM                9739 0.0163
 10 RS                9579 0.0160
 
+
+=== Top 10 municípios com mais casos ===
 municipio           total_casos    perc
    <chr>                     <dbl>   <dbl>
  1 NA                       298853 0.500  
@@ -33,7 +44,7 @@ municipio           total_casos    perc
  9 SAO JOSE DOS CAMPOS        3054 0.00511
 10 CAMPINAS                   2796 0.00468
 
-
+=== Total e percentual de casos por faixa etária ===
 faixa_etaria      total_casos    perc
    <chr>                   <dbl>   <dbl>
  1 20 a 39 anos           197054 0.330  
@@ -47,3 +58,17 @@ faixa_etaria      total_casos    perc
  9 02 a 04 anos            10665 0.0178 
 10 0 a 06 meses             8348 0.0140 
 11 sem informaç             5912 0.00989
+
+=== Total de casos em idosos 70+ por estado ===
+estadoIBGE total_casos n_pacientes media_casos_por_paciente perc_nacional perc_pacientes
+   <chr>            <dbl>       <int>                    <dbl>         <dbl>          <dbl>
+ 1 BR               31364          37                   848.           50.0            0.3 
+ 2 SP               13422        3686                     3.64         21.4           29.8 
+ 3 MG                2465        1365                     1.81          3.93          11.0 
+ 4 RJ                2025         470                     4.31          3.23           3.8 
+ 5 GO                1694         850                     1.99          2.7            6.88
+ 6 RS                1313         789                     1.66          2.09           6.38
+ 7 SC                 923         545                     1.69          1.47           4.41
+ 8 PA                 889         472                     1.88          1.42           3.82
+ 9 PE                 852         460                     1.85          1.36           3.72
+10 CE                 846         473                     1.79          1.35           3.83

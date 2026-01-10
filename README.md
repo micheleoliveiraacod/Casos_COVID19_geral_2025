@@ -4,7 +4,7 @@ Este repositório documenta uma análise exploratória de 2 DATASET's de casos d
 
 ## Descrição do Projeto - Dataset: db_comorbidades_covid_2025.csv
 
-**`🎯Objetivo:`** Identificar os indicadores que traduzm o desfecho da pandemia de COVID-19 no Brasil, a partir da distribuição de casos por estado e fixa etária.
+**`🎯Objetivo:`** Identificar os indicadores que traduzem os dados da pandemia de COVID-19 no Brasil, a partir da distribuição de casos por estado e fixa etária.
 
 **`📌Escopo:`** Analise descritiva dos dados.
 

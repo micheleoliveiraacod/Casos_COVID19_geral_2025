@@ -3,13 +3,11 @@ DATASET - db_geral_covid_2025.csv (não é o nome riginal, foi renomeado)
 FONTE - https://gitlab.com/cgcovid/dados-abertos/-/blob/d3de903fcec5d8790d0aee607d15fbff94aea836/Unificado%20e-SUS/2025_37/tabela_covid_esus_2025.xlsx
 
 Apresentação dos Dados
-Neste repositório estão disponibilizados, de forma pública, dados referentes ao Sistema de Informação da Vigilância Epidemiológica da Gripe (Sivep-Gripe), atualmente o Sistema oficial para o registro dos casos e óbitos por SRAG no Brasil.
-Aqui você encontrará arquivos dos bancos de dados organizados por ano epidemiológico: de 2019 a 2024 os bancos estão “congelados”, ou seja, não estão mais sendo atualizados; e o banco “vivo” correspondente ao ano atual, atualizado semanalmente. Também está disponibilizado o dicionário de variáveis e a ficha de notificação.
+Sistema oficial de informação referente aos casos leves e moderados de SG por covid-19.
+Neste repositório estão disponibilizados, de forma pública, dados referentes ao Sistema de Informação da Vigilância Epidemiológica da Gripe (Sivep-Gripe), atualmente o sistema oficial para o registro dos casos e óbitos por SRAG no Brasil.
 
 O arquivo mostra os números de casos e óbitos por:
         Semana Epidemiológica
         Unidade da Federação (UF)
         Município
         Faixa Etária
-        
-Isso significa que aqui estão sendo considerados pacientes que sobreviveram e que não sobreviveram, não existe classificação e separaçãodo. Estamos analisando os casos, independente do desfecho clinico.        

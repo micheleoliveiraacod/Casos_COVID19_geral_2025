@@ -10,7 +10,7 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 **`CONCLUSÃO:`** 
 
-Este dataset ja os casos estão agrupados por faixa etária, e classificado por municipio e estado.
+Neste dataset os dados ja estão agrupados por faixa etária municipio e estado.
 
 O arquivo tem 100672 linhas, mas o total de casos são a soma da coluna "Casos"
 
@@ -20,14 +20,14 @@ Numero de casos: 597.743
 
 Os estados com maior numero de casos foram SP, MG, RJ, GO, PA, e SC.
 
-As capitais SP,RJ e Brasilia liderarm o numero de casos por municipio.
+As capitais SP, RJ e Brasilia liderarm o numero de casos por municipio.
 
-As faixa etarias com maior numero de casos foram de 20 a 20 anos.
+As faixa etarias com maior numero de casos foram de 20 a 60 anos.
 
 Os estamos com mais casos em idosos 70+ foram SP, MG, RJ.
 
 No entando esta faixa etaria representa um numero pequeno em relação ao total de casos no Brasil.
 
-Total de casos para 70 anos e mais (nacional): 62736
+Total de casos para 70 anos e mais (nacional): 62.736
 
 

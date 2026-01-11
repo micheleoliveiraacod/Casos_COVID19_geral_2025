@@ -20,7 +20,7 @@ remotes::install_github("rfsaldanha/microdatasus") # se ainda não tiver
 
 #Importe o CSV
 library(readr)
-db_geral_covid_2025 <- read_csv2("C:/Users/miche/Documents/Projetos GitHub/Casos_COVID10_geral_2025/db_geral_covid_2025.csv")
+db_geral_covid_2025 <- read_csv2("db_geral_covid_2025.csv")
 View(db_geral_covid_2025)
 
 #Explorando os dados
@@ -55,6 +55,8 @@ print(names(db))
 print("Total de casos:")
 total_casos <- sum(db$casos)
 print(total_casos)
+skim(db)
+
 
 # 2. Total e percentual de casos por estado
 

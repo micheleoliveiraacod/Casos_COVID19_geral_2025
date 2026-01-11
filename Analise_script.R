@@ -40,13 +40,22 @@ Desc(db_geral_covid_2025$faixa_etaria)
 Desc(db_geral_covid_2025$estadoIBGE)
 Desc(db_geral_covid_2025$municipio)
 
+
+
+# 1. Total geral, média e mediana de casos por linha
 db <- db_geral_covid_2025 |>
   mutate(casos = as.numeric(casos))
 
-# 1. Total geral, média e mediana de casos por linha
-
 total_geral <- sum(db$casos, na.rm = TRUE)
 cat("Total geral de casos:", total_geral, "\n")
+
+
+casos_estado <- db_geral_covid_2025 |>
+  group_by(estadoIBGE) |>
+  summarise(total_casos = sum(casos, na.rm = TRUE)) |>
+  arrange(desc(total_casos))
+
+print(casos_estado)
 
 print("Dimensões do dataset:")
 print(dim(db))
@@ -72,6 +81,7 @@ cat("=== Total e percentual de casos por estado ===\n")
 print(tab_estado)
 cat("\n")
 
+
 # 3. Top 10 municípios com mais casos (total, percentual, média, mediana)
 
 tab_mun <- db |>
@@ -90,6 +100,7 @@ print(top10_mun)
 cat("\n")
 
 
+
 # 4. Total e percentual por faixa etária
 
 tab_faixa <- db |>
@@ -104,34 +115,8 @@ cat("=== Total e percentual de casos por faixa etária ===\n")
 print(tab_faixa)
 cat("\n")
 
-# 5. Total de casos por estado em idosos
 
 
-df_idosos <- db %>% filter(faixa_etaria == "70 anos e mais")
-
-total_casos_idosos <- sum(df_idosos$casos)
-print(paste("Total de casos para 70 anos e mais (nacional):", total_casos_idosos))
-
-
-print("=== TOTAL DE CASOS POR ESTADO - FAIXA ETÁRIA 70 ANOS E MAIS ===")
-
-#Por estado
-
-analise_estado_idosos <- df_idosos %>%
-  group_by(estadoIBGE) %>%
-  summarise(
-    total_casos = sum(casos),
-    n_pacientes = n(),
-    media_casos_por_paciente = round(mean(casos), 2),
-    .groups = 'drop'
-  ) %>%
-  mutate(
-    perc_nacional = round(total_casos / total_casos_idosos * 100, 2),
-    perc_pacientes = round(n_pacientes / nrow(df_idosos) * 100, 2)
-  ) %>%
-  arrange(desc(total_casos))
-
-print(analise_estado_idosos)
 
 # GRÁFICOS
 
@@ -266,6 +251,11 @@ ggplot(distri_estado,
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none")
 
+# 5. Total de casos para 70 anos e mais (nacional)
+df_idosos <- db %>% filter(faixa_etaria == "70 anos e mais")
+
+total_casos_idosos <- sum(df_idosos$casos)
+print(paste("Total de casos para 70 anos e mais (nacional):", total_casos_idosos))
 
 # 5. Casos em idosos (≥ 70 anos) por estado e município
 idosos_estado <- db_geral_covid_2025 %>%
@@ -273,6 +263,24 @@ idosos_estado <- db_geral_covid_2025 %>%
   group_by(estadoIBGE) %>%
   summarise(total_idosos = sum(casos, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_idosos))
+
+#Por estado
+
+analise_estado_idosos <- df_idosos %>%
+  group_by(estadoIBGE) %>%
+  summarise(
+    total_casos = sum(casos),
+    n_pacientes = n(),
+    media_casos_por_paciente = round(mean(casos), 2),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    perc_nacional = round(total_casos / total_casos_idosos * 100, 2),
+    perc_pacientes = round(n_pacientes / nrow(df_idosos) * 100, 2)
+  ) %>%
+  arrange(desc(total_casos))
+
+print(analise_estado_idosos)
 
 #Gráfico csos de idosos por estado
 ggplot(idosos_estado,

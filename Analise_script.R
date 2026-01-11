@@ -165,7 +165,9 @@ barplot(analise_estado_idosos$total_casos[1:10],
         main = "Top 10 Estados - Casos COVID 70+ Anos",
         las = 2, cex.names = 0.8)
 
-# 2. Municipios com mais casos, no Brasil.
+
+
+# 2. Municipios com mais casos no Brasil.
 
 #Gráfico de barras com o “top município” de cada estado
 mun_top <- db_geral_covid_2025 |>
@@ -190,6 +192,8 @@ ggplot(mun_top,
     fill = "Município"
   ) +
   theme_minimal()
+
+
 
 #3. Municípios por estado (top 3)
 
@@ -216,6 +220,8 @@ ggplot(mun_top3,
   ) +
   theme_minimal()
 
+
+
 # 4. Analise de faixa etária por estado e BRASIL
 
 #Gráfico de barras com total de casos por faixa etaria no Brasil
@@ -235,7 +241,7 @@ ggplot(casos_br_faixa,
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# 5. Distribuição etária por estado:
+# Distribuição etária por estado:
 distri_estado <- db_geral_covid_2025 %>%
   group_by(estadoIBGE, faixa_etaria) %>%
   summarise(total_casos = sum(casos, na.rm = TRUE), .groups = "drop") %>%
@@ -259,13 +265,14 @@ ggplot(distri_estado,
         legend.position = "none")
 
 
-# 6. Casos em idosos (≥ 70 anos) por estado e município
+# 5. Casos em idosos (≥ 70 anos) por estado e município
 idosos_estado <- db_geral_covid_2025 %>%
   filter(faixa_etaria == "70 anos e mais") %>%
   group_by(estadoIBGE) %>%
   summarise(total_idosos = sum(casos, na.rm = TRUE), .groups = "drop") %>%
   arrange(desc(total_idosos))
 
+#Gráfico csos de idosos por estado
 ggplot(idosos_estado,
        aes(x = reorder(estadoIBGE, total_idosos), y = total_idosos)) +
   geom_col(fill = "purple") +

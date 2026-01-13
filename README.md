@@ -10,7 +10,7 @@ Identificar padrões criticos sobre o total de casos de COVID-19 no Brasil, por 
 
 Analise descritiva.
 
-##  **`❓Algumas questões respondidas no estudo no estudo:`**
+##  **`❓Algumas questões respondidas:`**
 
 Quais estados concentram o maior número de casos?
 

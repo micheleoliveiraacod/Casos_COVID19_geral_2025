@@ -6,9 +6,9 @@ Este repositório documenta a análise a minha análise sobre o dataset de casos
 
 *Este projeto tem objetivos acadêmicos, apenas.*
 
-✅ Permitido: Observar o que e como foi feito e usar como referêcia para replicar o método.
+✅ Permitido: Observar o que e como foi feito, e usar como referêcia para replicar o método.
 
-❌ Proibido: Utilizar minhas análises e conclusão para qualquer objetivo, fazer declarações, citações e afirmações de qulquer natureza.
+❌ Proibido: Utilizar minhas análises e conclusão para qualquer objetivo, fazer declarações, citações e afirmações de qualquer natureza.
 
 ## **`🎯Objetivo:`** 
 

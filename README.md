@@ -8,7 +8,7 @@ Este repositório documenta a análise a minha análise sobre o dataset de casos
 
 ✅ Permitido: Observar o que e como foi feito, e usar como referêcia para replicar o método.
 
-❌ Proibido: Utilizar minhas análises e conclusão para qualquer objetivo, fazer declarações, citações e afirmações de qualquer natureza.
+❌ Proibido: Utilizar minhas análises e conclusão para fazer declarações, citações e afirmações de qualquer natureza.
 
 ## 🎯Objetivo:
 

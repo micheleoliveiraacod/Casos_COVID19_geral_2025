@@ -38,7 +38,7 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 - Grafico - Frequência de casos por estado.
 
-- Grafico - Municipios com maior numero de casos or estado (top3).
+- Grafico - Municipios com maior numero de casos por estado (top3).
 
 - Grafico - Municipios com maior numero de casos.
 

@@ -10,15 +10,15 @@ Este repositório documenta a análise a minha análise sobre o dataset de casos
 
 ❌ Proibido: Utilizar minhas análises e conclusão para qualquer objetivo, fazer declarações, citações e afirmações de qualquer natureza.
 
-## **`🎯Objetivo:`** 
+## 🎯Objetivo:
 
 Identificar padrões criticos sobre o total de casos de COVID-19 no Brasil, por estado, municipio e faixa etária.
 
-## **`📌Escopo:`** 
+## 📌Escopo:
 
 Analise descritiva.
 
-##  **`❓Algumas questões respondidas:`**
+## ❓Algumas questões respondidas:
 
 Quais estados concentram o maior número de casos?
 
@@ -30,7 +30,7 @@ Quais municípios se destacam com maiores números de casos?
 
 Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
-## **`🗂️ Resultados das analises`**
+## 🗂️ Resultados das analises
 
 - Analise descritiva com valores totais, médias e percentuais.
 

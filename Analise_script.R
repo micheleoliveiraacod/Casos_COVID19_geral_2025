@@ -139,18 +139,7 @@ ggplot(casos_estado,
   ) +
   theme_minimal()
 
-print(analise_estado_idosos)
 
-
-# Top 5 estados com mais casos em idosos
-print("=== TOP 5 ESTADOS COM MAIS CASOS (70+ ANOS) ===")
-print(head(analise_estado_idosos, 5))
-
-# Gráfico simples no console (opcional)
-barplot(analise_estado_idosos$total_casos[1:10], 
-        names.arg = analise_estado_idosos$estadoIBGE[1:10],
-        main = "Top 10 Estados - Casos COVID 70+ Anos",
-        las = 2, cex.names = 0.8)
 
 
 
@@ -281,6 +270,16 @@ analise_estado_idosos <- df_idosos %>%
   arrange(desc(total_casos))
 
 print(analise_estado_idosos)
+
+# Top 5 estados com mais casos em idosos
+print("=== TOP 5 ESTADOS COM MAIS CASOS (70+ ANOS) ===")
+print(head(analise_estado_idosos, 5))
+
+# Gráfico simples no console (opcional)
+barplot(analise_estado_idosos$total_casos[1:10], 
+        names.arg = analise_estado_idosos$estadoIBGE[1:10],
+        main = "Top 10 Estados - Casos COVID 70+ Anos",
+        las = 2, cex.names = 0.8)
 
 #Gráfico csos de idosos por estado
 ggplot(idosos_estado,

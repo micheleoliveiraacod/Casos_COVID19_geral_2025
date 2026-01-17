@@ -53,6 +53,6 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 
 *Este projeto tem objetivos acadêmicos.*
 
-✅ Permitido: Observar o trabalho e, usar como referêcia para replicar o método.
+✅ Permitido: Observar o trabalho e usar como referêcia para replicar o método.
 
 ❌ Proibido: Utilizar minhas análises e conclusão para fazer declarações, citações e afirmações de qualquer natureza.

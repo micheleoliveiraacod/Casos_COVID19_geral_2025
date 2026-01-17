@@ -49,7 +49,7 @@ Como se comportam casos em idosos (≥ 70 anos) por estado e município?
 - Conclusão - Respostas para as perguntas e uma breve discussão.
 <br/>
 
-## ⚖️ Uso Ético e Responsável
+## 📃 Instruções de uso
 
 *Este projeto tem objetivos acadêmicos.*
 
